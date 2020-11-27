@@ -46,7 +46,8 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var ApiService = /** @class */ (function () {
     function ApiService() {
-        this.apiPath = 'http://localhost:8080/api';
+        //this.apiPath = 'http://localhost:8080/api';
+        this.apiPath = 'https://routeq7nfrbfr-asanchezsys-che.b542.starter-us-east-2a.openshiftapps.com/api';
     }
     ApiService.prototype.getApiPath = function () {
         return this.apiPath;

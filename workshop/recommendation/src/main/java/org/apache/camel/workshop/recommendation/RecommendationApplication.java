@@ -15,7 +15,22 @@ public class RecommendationApplication {
 		SpringApplication.run(RecommendationApplication.class, args);
 	}
 
-
+@Component
+public static class Routes extends RouteBuilder {
+ 
+    @Override
+    public void configure() {
+ 
+        restConfiguration().bindingMode(RestBindingMode.json);
+ 
+        rest().get("/recommendations")
+                .route()
+                .setBody(constant(Collections.singletonList("i99")))
+                .log("Recommending ${body}");
+ 
+    }
+ 
+}
 	
 
 }
